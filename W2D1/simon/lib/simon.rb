@@ -12,7 +12,6 @@ class Simon
   end
 
   def play
-    # byebug
     until game_over
       take_turn
     end
