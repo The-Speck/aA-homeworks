@@ -1,0 +1,44 @@
+[31mF[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m[33m*[0m
+
+Pending:
+  [33mDessert#initialize sets a quantity[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:17[0m
+  [33mDessert#initialize starts ingredients as an empty array[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:19[0m
+  [33mDessert#initialize raises an argument error when given a non-integer quantity[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:21[0m
+  [33mDessert#add_ingredient adds an ingredient to the ingredients array[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:25[0m
+  [33mDessert#mix! shuffles the ingredient array[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:29[0m
+  [33mDessert#eat subtracts an amount from the quantity[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:33[0m
+  [33mDessert#eat raises an error if the amount is greater than the quantity[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:35[0m
+  [33mDessert#serve contains the titleized version of the chef's name[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:39[0m
+  [33mDessert#make_more calls bake on the dessert's chef with the dessert passed in[0m
+    # [36mNot yet implemented[0m
+    # [36m./spec/dessert_spec.rb:43[0m
+
+Failures:
+
+  1) Dessert#initialize sets a type
+     [31mFailure/Error: expect(chef.type).to eq("Muffin")[0m
+     [31m  Double "chef" received unexpected message :type with (no args)[0m
+     [36m# ./spec/dessert_spec.rb:14:in `block (3 levels) in <top (required)>'[0m
+
+Finished in 0.00132 seconds (files took 0.11246 seconds to load)
+[31m10 examples, 1 failure, 9 pending[0m
+
+Failed examples:
+
+[31mrspec ./spec/dessert_spec.rb:13[0m [36m# Dessert#initialize sets a type[0m
