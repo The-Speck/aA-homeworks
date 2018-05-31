@@ -45,6 +45,7 @@ describe Dessert do
     end
   end
 
+
   describe "#eat" do
     it "subtracts an amount from the quantity" do
       current_amount = dessert.quantity
