@@ -1,18 +1,20 @@
 fish_arr = ['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh']
 # => fiiiissshhhhhh
 def sluggish(arr)
-  max = nil
-  (1...arr.length-1).each do |idx1|
-    (idx1+1...arr.length).each do |idx2|
-      if arr[idx1].length > arr[idx2].length
-        max = arr[idx1]
-      elsif arr[idx1].length < arr[idx2].length
-        max = arr[idx2]
+  sorted = false
+
+  until sorted
+    sorted = true
+
+    (0...arr.length-1).each do |idx|
+      if arr[idx].length > arr[idx+1].length
+        arr[idx], arr[idx+1] = arr[idx+1], arr[idx]
+        sorted = false
       end
     end
   end
 
-  max
+  arr.last
 end
 
 p sluggish(fish_arr)
@@ -51,7 +53,6 @@ end
 
 p slow_dance("up", tiles_array)
 p slow_dance("right-down", tiles_array)
-
 
 new_tiles = tiles_array.zip((0...8).to_a).to_h
 
