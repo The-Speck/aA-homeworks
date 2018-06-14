@@ -1,0 +1,8 @@
+<h1>ALL THE BANDS ARE BELONG TO US</h1>
+
+<% Band.all.each do |band| %>
+  <br>  
+  <p>
+  <a href="<%= band_url(band.id) %>"> <%= band.name %></a>
+  </p>
+<% end %>

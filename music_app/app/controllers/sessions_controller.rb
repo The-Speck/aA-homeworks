@@ -8,10 +8,9 @@ class SessionsController < ApplicationController
     email = user_params[:email]
     password = user_params[:password]
     user = User.find_by_credentials(email, password)
-    
     if user
       login!(user)
-      redirect_to user_url
+      redirect_to users_url
     else
       render :new
     end
