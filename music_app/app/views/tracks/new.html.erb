@@ -1,0 +1,10 @@
+<h1>Assign a new album</h1>
+
+<%= render "form", 
+  action: albums_url, 
+  method: "post", 
+  button: "Assign Album", 
+  album_title: "", 
+  studio: @album.studio,
+  release: @album.date
+%>
