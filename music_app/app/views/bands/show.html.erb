@@ -2,3 +2,12 @@
 
 <a href="<%= edit_band_url(@band.id) %>">Edit</a>
 <%= render "form", action: band_url(@band.id), method: "delete", button: "Delete", band_name: "" %>
+
+<h2>All their albums:</h2>
+<% @band.albums.each do |album| %>
+  <br>
+  <a href="<%= album_url(album.id) %>"><%= album.title %></a>
+<% end %>
+
+<br>
+<a href="<%= new_album_url %>">Add an album</a>

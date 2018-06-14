@@ -14,4 +14,9 @@
 
 class Album < ApplicationRecord
   
+  validates :band_id, :title, :date, presence: true
+  
+  belongs_to :band
+  
+  
 end
