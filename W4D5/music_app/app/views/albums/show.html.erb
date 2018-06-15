@@ -1,0 +1,16 @@
+<h1><%= @album.title %></h1>
+<h2>by <%= link_to @album.band.name, band_url(@album.band_id) %></h2>
+<p>Released: <%= @album.date %></p>
+<p>Type: <%= @album.studio ? "Studio" : "Live" %></p>
+
+
+<a href="<%= edit_album_url(@album.id) %>">Edit</a>
+<%= render "form", 
+  action: album_url(@album.id), 
+  method: "delete", 
+  button: "Delete", 
+  album_title: "", 
+  studio: @album.studio,
+  release: @album.date
+%>
+

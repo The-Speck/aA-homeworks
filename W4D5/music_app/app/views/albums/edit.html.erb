@@ -1,0 +1,38 @@
+<h1>Edit This Album</h1>
+
+<%= render "form", 
+  action: album_url(@album.id), 
+  method: "patch", 
+  button: "Edit Album", 
+  album_title: @album.title, 
+  studio: @album.studio,
+  release: @album.date
+%>
+
+<!-- <%# @album.tracks.each do |track| %>
+  <p>track.title</p>
+<%# end %> -->
+
+<br>
+<br>
+
+<h2>Add a Track</h2>
+
+<form action=<%= album_tracks_url(@album.id) %> method="post">
+  <input type="hidden" name="_method" value="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+  
+  <label for="track_title">Song Title</label>
+  <input type="text" id="track_title" name="track[title]">
+  
+  <div>  
+  <label for="track_type1">Studio:</label>
+  <input id="track_type1" type="radio" name="track[track_type]">
+  
+  <label for="track_type2">Live:</label>
+  <input id="track_type2" type="radio" name="track[track_type]">
+  </div>
+  
+  
+  <button type="submit">Add Track</button>
+</form>

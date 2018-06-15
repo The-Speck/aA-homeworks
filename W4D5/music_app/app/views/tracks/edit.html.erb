@@ -1,0 +1,10 @@
+<h1>Edit This Album</h1>
+
+<%= render "form", 
+  action: album_url(@album.id), 
+  method: "patch", 
+  button: "Edit Album", 
+  album_title: @album.title, 
+  studio: @album.studio,
+  release: @album.date
+%>
